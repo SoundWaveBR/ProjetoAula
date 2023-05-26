@@ -47,7 +47,7 @@ public class ThirdActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if(isBoxSelectable(0)){
-                    perforAction((ImageView) view, 0);
+                    performAction((ImageView) view, 0);
                 }
             }
         });
@@ -56,7 +56,7 @@ public class ThirdActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if(isBoxSelectable(1)){
-                    perforAction((ImageView) view, 1);
+                    performAction((ImageView) view, 1);
                 }
             }
         });
@@ -64,7 +64,7 @@ public class ThirdActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if(isBoxSelectable(2)){
-                    perforAction((ImageView) view, 2);
+                    performAction((ImageView) view, 2);
                 }
             }
         });
@@ -72,7 +72,7 @@ public class ThirdActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if(isBoxSelectable(3)){
-                    perforAction((ImageView) view, 3);
+                    performAction((ImageView) view, 3);
                 }
             }
         });
@@ -80,7 +80,7 @@ public class ThirdActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if(isBoxSelectable(4)){
-                    perforAction((ImageView) view, 4);
+                    performAction((ImageView) view, 4);
                 }
             }
         });
@@ -88,7 +88,7 @@ public class ThirdActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if(isBoxSelectable(5)){
-                    perforAction((ImageView) view, 5);
+                    performAction((ImageView) view, 5);
                 }
             }
         });
@@ -96,7 +96,7 @@ public class ThirdActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if(isBoxSelectable(6)){
-                    perforAction((ImageView) view, 6);
+                    performAction((ImageView) view, 6);
                 }
             }
         });
@@ -104,7 +104,7 @@ public class ThirdActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if(isBoxSelectable(7)){
-                    perforAction((ImageView) view, 7);
+                    performAction((ImageView) view, 7);
                 }
             }
         });
@@ -112,13 +112,13 @@ public class ThirdActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if(isBoxSelectable(8)){
-                    perforAction((ImageView) view, 8);
+                    performAction((ImageView) view, 8);
                 }
             }
         });
     }
 
-    private void perforAction(ImageView imageView, int selectedBoxPosition) {
+    private void performAction(ImageView imageView, int selectedBoxPosition) {
         boxPositions[selectedBoxPosition] = playerTurn;
 
         if (playerTurn == 1) {
@@ -133,7 +133,7 @@ public class ThirdActivity extends AppCompatActivity {
                 resultDialog.setCancelable(false);
                 resultDialog.show();
             } else {
-                changePlayerTurn(1);
+                changePlayerTurn(2);
                 totalSelectedBoxes++;
             }
         } else {
@@ -173,7 +173,6 @@ public class ThirdActivity extends AppCompatActivity {
             final int[] combination = combinationList.get(i);
 
             if (boxPositions[combination[0]] == playerTurn && boxPositions[combination[1]] == playerTurn && boxPositions[combination[2]] == playerTurn) {
-
                 response = true;
             }
         }
