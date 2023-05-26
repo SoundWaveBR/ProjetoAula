@@ -6,13 +6,14 @@ import android.os.Bundle;
 import android.widget.ImageView;
 
 import com.example.projetoaula.databinding.ActivityMainBinding;
+import com.example.projetoaula.databinding.ActivityThirdBinding;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class ThirdActivity extends AppCompatActivity {
 
-    ActivityMainBinding binding;
+    ActivityThirdBinding binding;
     private final List<int[]> combinationList = new ArrayList<>();
     private int [] boxPositions = {0,0,0,0,0,0,0,0,0}; // 9 zeros
     private int playerTurn = 1;
@@ -21,7 +22,7 @@ public class ThirdActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding = ActivityMainBinding.inflate(getLayoutInflater());
+        binding = ActivityThirdBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
     }
 
@@ -37,12 +38,11 @@ public class ThirdActivity extends AppCompatActivity {
 
     private void changePlayerTurn(int currentPlayerTurn) {
         playerTurn = currentPlayerTurn;
-        if (playerTurn == 1); {
-            // Não está referenciando, já refiz o xml inteiro, o id dele está correto.
+        if (playerTurn == 1) {
             binding.playerOneLayout.setBackgroundResource(R.drawable.black_border);
             binding.playerTwoLayout.setBackgroundResource(R.drawable.white_box);
         } else {
-            binding.playerTwpLayout.setBackgroundResource(R.drawable.black_border);
+            binding.playerTwoLayout.setBackgroundResource(R.drawable.black_border);
             binding.playerOneLayout.setBackgroundResource(R.drawable.white_box);
         }
     }
