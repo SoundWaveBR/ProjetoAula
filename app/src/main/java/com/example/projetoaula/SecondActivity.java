@@ -6,6 +6,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.SectionIndexer;
+import android.widget.Toast;
 
 public class SecondActivity extends AppCompatActivity {
 
@@ -13,6 +16,30 @@ public class SecondActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
+
+        EditText playerOne = findViewById(R.id.playerOne);
+        EditText playerTwo = findViewById(R.id.playerTwo);
+        Button startGameButton = findViewById(R.id.startGameButton);
+
+
+        startGameButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                String getPlayerOneName = playerOne.getText().toString();
+                String getPlayerTwoName = playerTwo.getText().toString();
+
+
+                if (getPlayerOneName.isEmpty() || getPlayerTwoName.isEmpty()){
+                    Toast.makeText(SecondActivity.this, "Por favor insira o nome do jogador", Toast.LENGTH_SHORT).show();
+                } else {
+                    Intent intent = new Intent(SecondActivity.this, MainActivity.class);
+                    intent.putExtra("JogadorUm", getPlayerOneName);
+                    intent.putExtra("JogadorDois", getPlayerTwoName);
+                    startActivity(intent);
+                }
+            }
+        });
 
         //Encontrar o botão no layout
 
