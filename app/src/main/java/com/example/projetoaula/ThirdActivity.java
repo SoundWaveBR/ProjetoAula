@@ -38,6 +38,7 @@ public class ThirdActivity extends AppCompatActivity {
     private void changePlayerTurn(int currentPlayerTurn) {
         playerTurn = currentPlayerTurn;
         if (playerTurn == 1); {
+            // Não está referenciando, arrumar isso
             binding.playerOneLayout.setBackgroundResource(R.drawable.black_border);
             binding.playerTwoLayout.setBackgroundResource(R.drawable.white_box);
         } else {
