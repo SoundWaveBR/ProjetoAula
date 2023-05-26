@@ -35,7 +35,12 @@ public class ThirdActivity extends AppCompatActivity {
     }
 
 
-    private void change
+    private void changePlayerTurn(int currentPlayerTurn) {
+        playerTurn = currentPlayerTurn;
+        if (playerTurn == 2); {
+            binding.playerOneLayout.set
+        }
+    }
 
 }
 
