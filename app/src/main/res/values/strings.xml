@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Projeto Aula</string>
+    <string name="jogador_um">Jogador um</string>
+    <string name="n_o_clique_nesse_bot_o">Não Clique nesse botão!</string>
+    <string name="todo">TODO</string>
+    <string name="jogador_dois">Jogador dois</string>
 </resources>
