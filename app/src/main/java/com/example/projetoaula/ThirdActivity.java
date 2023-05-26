@@ -25,7 +25,7 @@ public class ThirdActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
     }
 
-    private void performance(ImageView imageView, int selectedBoxPosition) {
+    private void perforAction(ImageView imageView, int selectedBoxPosition) {
         boxPositions[selectedBoxPosition] = playerTurn;
 
         if (playerTurn == 1) {
@@ -37,9 +37,12 @@ public class ThirdActivity extends AppCompatActivity {
 
     private void changePlayerTurn(int currentPlayerTurn) {
         playerTurn = currentPlayerTurn;
-        if (playerTurn == 2); {
+        if (playerTurn == 1); {
             binding.playerOneLayout.setBackgroundResource(R.drawable.black_border);
             binding.playerTwoLayout.setBackgroundResource(R.drawable.white_box);
+        } else {
+            binding.playerTwpLayout.setBackgroundResource(R.drawable.black_border);
+            binding.playerOneLayout.setBackgroundResource(R.drawable.white_box);
         }
     }
 
