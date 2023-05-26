@@ -8,17 +8,6 @@
     android:background="@drawable/pagebkg"
     tools:context=".SecondActivity">
 
-    <Button
-        android:id="@+id/btnvoltarjogodavelha"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_margin="30dp"
-        android:text="Voltar"
-        android:textSize="18sp"
-        app:cornerRadius="20dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
-
 
 
     <androidx.cardview.widget.CardView
@@ -84,6 +73,17 @@
                 android:text="Começar Jogo"
                 android:textSize="18sp"
                 app:cornerRadius="20dp" />
+
+            <Button
+                android:id="@+id/btnvoltarjogodavelha"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_margin="30dp"
+                android:text="Voltar"
+                android:textSize="18sp"
+                app:cornerRadius="20dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true" />
         </LinearLayout>
 
     </androidx.cardview.widget.CardView>
