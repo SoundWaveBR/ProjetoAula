@@ -13,12 +13,12 @@ import android.widget.TextView;
 public class ResultDialog extends Dialog {
 
     private final String message;
-    private final MainActivity mainActivity;
+    private final ThirdActivity thirdActivity;
 
-    public ResultDialog(@NonNull Context context, String message, MainActivity mainActivity) {
+    public ResultDialog(@NonNull Context context, String message, ThirdActivity thirdActivity) {
         super(context);
         this.message = message;
-        this.mainActivity = mainActivity;
+        this.thirdActivity = thirdActivity;
     }
 
     @Override
@@ -36,7 +36,7 @@ public class ResultDialog extends Dialog {
         startAgainButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mainActivity.restartMatch();
+                thirdActivity.restartMatch();
                 dismiss();
             }
         });
