@@ -7,6 +7,24 @@
     android:layout_height="match_parent"
     android:background="@color/Lavander"
     tools:context=".ThirdActivity">
+    <LinearLayout
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btnvoltarcadastro"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:gravity="center"
+            android:padding="1dp"
+            android:text="Voltar" />
+
+
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"

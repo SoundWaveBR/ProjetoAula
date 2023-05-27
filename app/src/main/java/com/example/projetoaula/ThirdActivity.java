@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 
 import com.example.projetoaula.databinding.ActivityMainBinding;
@@ -114,6 +115,16 @@ public class ThirdActivity extends AppCompatActivity {
                 if(isBoxSelectable(8)){
                     performAction((ImageView) view, 8);
                 }
+            }
+        });
+        //Encontrar o botão no layout
+        Button backButton = findViewById(R.id.btnvoltarcadastro);
+        // Adicionar evento de clique ao botão
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Finalizar a atividade (ThirdActivity) e voltar para a tela anterior.
+                finish();
             }
         });
     }
