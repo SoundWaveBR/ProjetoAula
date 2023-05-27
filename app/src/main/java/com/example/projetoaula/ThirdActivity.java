@@ -148,7 +148,7 @@ public class ThirdActivity extends AppCompatActivity {
                 resultDialog.setCancelable(false);
                 resultDialog.show();
             } else {
-                changePlayerTurn(2);
+                changePlayerTurn(1);
                 totalSelectedBoxes++;
             }
         }
