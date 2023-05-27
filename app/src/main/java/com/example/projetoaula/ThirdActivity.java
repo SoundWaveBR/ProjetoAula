@@ -136,7 +136,7 @@ public class ThirdActivity extends AppCompatActivity {
             imageView.setImageResource(R.drawable.ximage);
             if (checkResults()) {
                 ResultDialog resultDialog = new ResultDialog(ThirdActivity.this, binding.playerOneName.getText().toString()
-                        + " é o vençedor", ThirdActivity.this);
+                        + " é o vencedor", ThirdActivity.this);
                 resultDialog.setCancelable(false);
                 resultDialog.show();
             } else if (totalSelectedBoxes == 9) {
@@ -151,7 +151,7 @@ public class ThirdActivity extends AppCompatActivity {
             imageView.setImageResource(R.drawable.oimage);
             if (checkResults()) {
                 ResultDialog resultDialog = new ResultDialog(ThirdActivity.this, binding.playerTwoName.getText().toString()
-                        + " é o vençedor", ThirdActivity.this);
+                        + " é o vencedor", ThirdActivity.this);
                 resultDialog.setCancelable(false);
                 resultDialog.show();
             } else if (totalSelectedBoxes == 9) {

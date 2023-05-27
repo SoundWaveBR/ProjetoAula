@@ -26,18 +26,19 @@ public class ResultDialog extends Dialog {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result_dialog);
 
-
+        // Encontrar os elementos de layout
         TextView messageText = findViewById(R.id.messageText);
         Button startAgainButton = findViewById(R.id.startAgainButton);
 
-
+        // Definir o texto da mensagem
         messageText.setText(message);
 
+        // Configurar o evento de clique do botão "Jogar Novamente"
         startAgainButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                thirdActivity.restartMatch();
-                dismiss();
+                thirdActivity.restartMatch(); // Reiniciar a partida na atividade ThirdActivity
+                dismiss(); // Fechar o diálogo
             }
         });
     }
