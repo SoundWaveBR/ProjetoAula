@@ -5,6 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/Lavander"
     tools:context=".MainActivity">
 
     <androidx.cardview.widget.CardView
@@ -14,7 +15,8 @@
         android:layout_marginStart="30dp"
         android:layout_marginEnd="30dp"
         app:cardCornerRadius="30dp"
-        app:cardElevation="20dp">
+        app:cardElevation="20dp"
+        app:cardBackgroundColor="@color/white">
 
         <LinearLayout
         android:layout_width="match_parent"
@@ -53,7 +55,7 @@
                 android:layout_marginTop="30dp"
                 android:layout_marginEnd="30dp"
                 android:layout_marginBottom="30dp"
-                android:text="Listar (em teste ainda)"
+                android:text="------------"
                 android:textSize="18sp"
                 app:cornerRadius="20dp" />
 

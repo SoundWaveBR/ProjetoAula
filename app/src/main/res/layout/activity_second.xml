@@ -25,6 +25,7 @@
             android:layout_gravity="center_horizontal"
             android:background="@drawable/lavander_border"
             android:orientation="vertical"
+            android:backgroundTint="@color/white"
             android:padding="24dp">
 
 
