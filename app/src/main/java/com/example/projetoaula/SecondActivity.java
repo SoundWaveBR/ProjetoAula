@@ -21,6 +21,7 @@ public class SecondActivity extends AppCompatActivity {
         EditText playerTwo = findViewById(R.id.playerTwo);
         Button startGameButton = findViewById(R.id.startGameButton);
 
+
         // Definir evento de clique para o botão "Iniciar Jogo"
         startGameButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -39,9 +40,14 @@ public class SecondActivity extends AppCompatActivity {
                 } else {
                     // Criar uma Intent para iniciar a terceira atividade (ThirdActivity) e passar os nomes dos jogadores
                     Intent intent = new Intent(SecondActivity.this, ThirdActivity.class);
-                    intent.putExtra("playerOne", getPlayerOneName);
-                    intent.putExtra("playerTwo", getPlayerTwoName);
+                    intent.putExtra("JogadorUm", getPlayerOneName);
+                    intent.putExtra("JogadorDois", getPlayerTwoName);
                     startActivity(intent);
+
+                    // Limpar os campos de texto
+                    playerOne.setText("");
+                    playerTwo.setText("");
+
                 }
             }
         });
